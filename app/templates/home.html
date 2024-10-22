@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taisky - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="profile">
+        <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+        <p class="greeting">Hello, Tomas</p>
+    </div>
+    
+    <div class="subtasks">
+        <h3>Subtasks</h3>
+        <div class="input-group">
+            <input type="text" placeholder="Add a subtask..." class="subtask-input">
+            <button class="add-button">Add</button>
+        </div>
+        <ul class="subtask-list">
+            <li>Example Subtask 1</li>
+            <li>Example Subtask 2</li>
+            <li>Example Subtask 3</li>
+            <li>Example Subtask 4</li>
+            <li>Example Subtask 5</li>
+            <li>Example Subtask 6</li>
+            <li>Example Subtask 7</li>
+            <li>Example Subtask 8</li>
+            <li>Example Subtask 9</li>
+            <li>Example Subtask 10</li>
+        </ul>
+    </div>
+</div>
+
+<nav>
+    <div class="nav-container">
+        <a href="home.html">Home</a>
+        <a href="settings.html">Settings</a>
+        <a href="logout.html">Logout</a>
+    </div>
+</nav>
+
+</body>
+</html>
