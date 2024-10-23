@@ -11,7 +11,7 @@
 <div class="sidebar">
     <div class="profile">
         <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
-        <p class="greeting">Hello, Tomas</p>
+        <p class="greeting">Hello, {{ username }}</p>
     </div>
     
     <div class="subtasks">
@@ -33,6 +33,19 @@
             <li>Example Subtask 10</li>
         </ul>
     </div>
+
+    <div class="add-task">
+        <h3>Add Task</h3>
+        <form action="/add_task" method="POST">
+            <input type="text" name="task" placeholder="New task..." class="task-input" required>
+            <button type="submit" class="add-button">Add Task</button>
+        </form>
+    </div>
+</div>
+
+<div class="main-content">
+    <h2>Your Tasks</h2>
+    
 </div>
 
 <nav>

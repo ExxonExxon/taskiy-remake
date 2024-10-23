@@ -9,18 +9,19 @@ auth_bp = Blueprint('auth', __name__)
 def login():
     error_message = ""
     
-    if session.get("user_id") != "None":
+    if session.get("user_id") != None:
         return redirect("/home")
     
     if request.method == "POST":
-        username = request.form.get("username")
-        password = request.form.get("password")
+        username: str = request.form.get("username")
+        password: str = request.form.get("password")
         
         get_user_with_username = User.query.filter_by(username=username).first()
         
         if get_user_with_username:
             if check_password_hash(get_user_with_username.password, password):
                 session["user_id"] = get_user_with_username.username
+                session["user_password"] = password
                 return redirect("/home")
             else:
                 error_message = "Invalid username or password."
@@ -35,7 +36,7 @@ def signup():
     error_message = ""
 
 
-    if session.get("user_id") != "None":
+    if session.get("user_id") != None:
         return redirect("/home")
 
     if request.method == "POST":

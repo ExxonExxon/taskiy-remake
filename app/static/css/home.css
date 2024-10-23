@@ -21,6 +21,16 @@ body {
     overflow-y: auto; /* Scrollable if content overflows */
 }
 
+.main-content {
+    margin-left: 250px; /* Leave space for the sidebar */
+    padding: 20px; /* Padding for the main content */
+    flex: 1; /* Take remaining space */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+}
+
 .profile {
     display: flex;
     flex-direction: column; /* Stack items vertically */
@@ -153,4 +163,30 @@ nav a:hover {
 
 nav a:hover::after {
     transform: translateX(-50%) scaleX(1);
+}
+
+.add-task {
+    margin-top: 30px; /* Space above task section */
+}
+
+.add-task h3 {
+    margin: 0 0 15px 0; /* Space below title */
+    font-size: 20px; /* Title size */
+    font-weight: 600; /* Semi-bold title */
+    border-bottom: 2px solid #5cb85c; /* Underline effect */
+    padding-bottom: 5px; /* Padding below title */
+}
+
+.task-input {
+    padding: 10px; /* Padding for input */
+    border: 2px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth transition */
+    margin-bottom: 10px; /* Space below input */
+    width: calc(100% - 20px); /* Full width minus padding */
+}
+
+.task-input:focus {
+    border-color: #5cb85c; /* Change border color on focus */
+    outline: none; /* Remove default outline */
 }
